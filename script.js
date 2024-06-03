@@ -43,6 +43,59 @@ let myChart = new Chart(wheel, {
     ],
   },
   options: {
-    
+    // Responsive Chart
+    responsive: true,
+    animation: { duration: 0 },
+    plugins: {
+      // hide tooltip and legend
+      tooltip: false,
+      legend: {
+        display: false,
+      },
+      // display labels inside pie chart
+      datalabels: {
+        colour: "#ffffff",
+        formatter: (_,context) =>
+          context.chart.data.labels[context.dataIndex],
+        font: { size: 24}
+      }
+    },
+  },
+});
+
+// display value based on the randomAngle
+const valueGenerator = (angleValue) => {
+  for(let i of rotationValues){
+    // if the angleValue is between min and max then display it
+    if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
+      finalValue.innerHTML = `<p>Value: ${i.value}</p>`
+      spinBtn.disabled = false
+      break
+    }
   }
+};
+
+// Spinner count
+let count = 0
+
+// 100 rotations for animation and last rotaion for result
+let resultValue = 101
+
+// Start spinning
+spinBtn.addEventListener("click", () => {
+  // Empty final value
+  finalValue.innerHTML = `<p>Good Luck!</p>`
+  // Generate random degrees to stop at
+  let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0)
+  // Interval for rotation animation
+  let rotaionInterval = window.setInterval(()=>{
+    // Set rotation for piechart
+    /*
+    Initially to make the piechart rotate faster we set resultValue to 101 so it rotates 101 degrees at a time and this reduces by 1 with every count.
+    Eventually on last rotation we rotate by 1 degree at a time.
+    */
+  })
+  
+  
+  )
 })
