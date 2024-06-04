@@ -24,12 +24,12 @@ const data = [16, 16, 16, 16, 16, 16]
 
 // Color of each piece
 var pieColors = [
-  "#0099ff",
-  "#ff1a21",
-  "#ff66ff",
-  "#ffff1a",
-  "#99ff33",
-  "#7300e6",
+  "#8b35bc",
+  "#b163da",
+  "#8b35bc",
+  "#b163da",
+  "#8b35bc",
+  "#b163da",
 ]
 
 // Chart
@@ -63,7 +63,7 @@ let myChart = new Chart(wheel, {
         color: "#ffffff",
         formatter: (_,context) =>
           context.chart.data.labels[context.dataIndex],
-        font: { size: 24},
+        font: { size: 24 },
       },
     },
   },
