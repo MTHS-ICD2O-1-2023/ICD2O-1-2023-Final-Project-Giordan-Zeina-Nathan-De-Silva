@@ -63,11 +63,11 @@ let myChart = new Chart(wheel, {
         color: "#ffffff",
         formatter: (_,context) =>
           context.chart.data.labels[context.dataIndex],
-        font: { size: 24}
-      }
+        font: { size: 24},
+      },
     },
   },
-});
+})
 
 // display value based on the randomAngle
 const valueGenerator = (angleValue) => {
@@ -79,7 +79,7 @@ const valueGenerator = (angleValue) => {
       break
     }
   }
-};
+}
 
 // Spinner count
 let count = 0
