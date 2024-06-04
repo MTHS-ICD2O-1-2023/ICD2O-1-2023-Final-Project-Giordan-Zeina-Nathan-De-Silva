@@ -1,3 +1,9 @@
+// Copyright (c) 2024 Nathan De Silva and Giordan Zeina All rights reserved
+//
+// Created by: Nathan De Silva and Giordan Zeina
+// Created on: May 2024
+// This file contains the JS functions for index.html
+
 const wheel = document.getElementById("wheel")
 const spinBtn = document.getElementById("spin-btn")
 const finalValue = document.getElementById("final-value")
@@ -94,8 +100,21 @@ spinBtn.addEventListener("click", () => {
     Initially to make the piechart rotate faster we set resultValue to 101 so it rotates 101 degrees at a time and this reduces by 1 with every count.
     Eventually on last rotation we rotate by 1 degree at a time.
     */
-  })
-  
-  
-  )
+   myChart.options.rotation = myChart.options.
+   rotation + resultValue
+   // Update chart with new value
+   myChart.update()
+   // If rotation>360 reset it back 0
+   if (myChart.options.rotation >= 360) {
+    count += 1
+    resultValue -= 5
+    myChart.options.rotation = 0
+   }
+   else if(count> 15 && myChart.options.rotation) {
+    valueGenerator(randomDegree)
+    clearInterval(rotationInterval)
+    count = 
+    resultValue = 101
+   }
+  }, 10)
 })
