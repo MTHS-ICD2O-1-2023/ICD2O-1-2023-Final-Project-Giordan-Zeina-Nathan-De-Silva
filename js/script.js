@@ -1,3 +1,9 @@
+// Copyright (c) 2024 Nathan De Silva and Giordan Zeina All rights reserved
+//
+// Created by: Nathan De Silva and Giordan Zeina
+// Created on: May 2024
+// This file contains the JS functions for index.html
+
 const wheel = document.getElementById("wheel")
 const spinBtn = document.getElementById("spin-btn")
 const finalValue = document.getElementById("final-value")
@@ -16,14 +22,14 @@ const rotationValues = [
 // Size of each piece
 const data = [16, 16, 16, 16, 16, 16]
 
-// Colour of each piece
-var pieColours = [
-  "#0099ff",
-  "#ff1a21",
-  "#ff66ff",
-  "#ffff1a",
-  "#99ff33",
-  "#7300e6",
+// Color of each piece
+var pieColors = [
+  "#8b35bc",
+  "#b163da",
+  "#8b35bc",
+  "#b163da",
+  "#8b35bc",
+  "#b163da",
 ]
 
 // Chart
@@ -38,7 +44,7 @@ let myChart = new Chart(wheel, {
     // Pie settings
     datasets: [
       {
-        backgroundColour: pieColours
+        backgroundColor: pieColors
       },
     ],
   },
@@ -54,14 +60,14 @@ let myChart = new Chart(wheel, {
       },
       // display labels inside pie chart
       datalabels: {
-        colour: "#ffffff",
+        color: "#ffffff",
         formatter: (_,context) =>
           context.chart.data.labels[context.dataIndex],
-        font: { size: 24}
-      }
+        font: { size: 24 },
+      },
     },
   },
-});
+})
 
 // display value based on the randomAngle
 const valueGenerator = (angleValue) => {
@@ -73,7 +79,7 @@ const valueGenerator = (angleValue) => {
       break
     }
   }
-};
+}
 
 // Spinner count
 let count = 0
@@ -88,14 +94,27 @@ spinBtn.addEventListener("click", () => {
   // Generate random degrees to stop at
   let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0)
   // Interval for rotation animation
-  let rotaionInterval = window.setInterval(()=>{
+  let rotationInterval = window.setInterval(()=>{
     // Set rotation for piechart
     /*
     Initially to make the piechart rotate faster we set resultValue to 101 so it rotates 101 degrees at a time and this reduces by 1 with every count.
     Eventually on last rotation we rotate by 1 degree at a time.
     */
-  })
-  
-  
-  )
+   myChart.options.rotation = myChart.options.
+   rotation + resultValue
+   // Update chart with new value
+   myChart.update()
+   // If rotation>360 reset it back 0
+   if (myChart.options.rotation >= 360) {
+    count += 1
+    resultValue -= 5
+    myChart.options.rotation = 0
+   }
+   else if(count> 15 && myChart.options.rotation) {
+    valueGenerator(randomDegree)
+    clearInterval(rotationInterval)
+    count = 
+    resultValue = 101
+   }
+  }, 10)
 })
