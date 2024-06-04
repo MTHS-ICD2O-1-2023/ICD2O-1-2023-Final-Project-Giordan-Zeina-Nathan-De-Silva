@@ -22,8 +22,8 @@ const rotationValues = [
 // Size of each piece
 const data = [16, 16, 16, 16, 16, 16]
 
-// Colour of each piece
-var pieColours = [
+// Color of each piece
+var pieColors = [
   "#0099ff",
   "#ff1a21",
   "#ff66ff",
@@ -44,7 +44,7 @@ let myChart = new Chart(wheel, {
     // Pie settings
     datasets: [
       {
-        backgroundColour: pieColours
+        backgroundColor: pieColors
       },
     ],
   },
@@ -60,7 +60,7 @@ let myChart = new Chart(wheel, {
       },
       // display labels inside pie chart
       datalabels: {
-        colour: "#ffffff",
+        color: "#ffffff",
         formatter: (_,context) =>
           context.chart.data.labels[context.dataIndex],
         font: { size: 24}
@@ -94,7 +94,7 @@ spinBtn.addEventListener("click", () => {
   // Generate random degrees to stop at
   let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0)
   // Interval for rotation animation
-  let rotaionInterval = window.setInterval(()=>{
+  let rotationInterval = window.setInterval(()=>{
     // Set rotation for piechart
     /*
     Initially to make the piechart rotate faster we set resultValue to 101 so it rotates 101 degrees at a time and this reduces by 1 with every count.
