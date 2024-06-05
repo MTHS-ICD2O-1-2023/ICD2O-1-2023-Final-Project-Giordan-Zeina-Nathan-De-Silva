@@ -24,12 +24,12 @@ const data = [16, 16, 16, 16, 16, 16]
 
 // Color of each piece
 var pieColors = [
-  "#8b35bc",
-  "#b163da",
-  "#8b35bc",
-  "#b163da",
-  "#8b35bc",
-  "#b163da",
+  "#ff0000",
+  "#1a1aff",
+  "#00cc00",
+  "#ff33ff",
+  "#cc9900",
+  "#9f1aff",
 ]
 
 // Chart
