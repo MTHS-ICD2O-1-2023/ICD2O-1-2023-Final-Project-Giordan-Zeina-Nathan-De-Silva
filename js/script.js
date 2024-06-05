@@ -90,7 +90,7 @@ let resultValue = 101
 
 // Start spinning
 spinBtn.addEventListener("click", () => {
-  spinBtn.disabled = true
+  spinBtn.disabled = false
   // Empty final value
   finalValue.innerHTML = `<p>Good Luck!</p>`
   // Generate random degrees to stop at
