@@ -44,7 +44,8 @@ let myChart = new Chart(wheel, {
     // Pie settings
     datasets: [
       {
-        backgroundColor: pieColors
+        backgroundColor: pieColors,
+        data: data,
       },
     ],
   },
