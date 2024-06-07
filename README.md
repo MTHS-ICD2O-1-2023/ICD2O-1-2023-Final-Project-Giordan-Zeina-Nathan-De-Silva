@@ -1,6 +1,6 @@
 # ICD2O-1-2023-Final-Project-Giordan-Zeina-Nathan-De-Silva
 
-Link to GitHub Pages for this repo:https://mths-icd2o-1-2023.github.io/ICD2O-1-2023-Final-Project-Giordan-Zeina-Nathan-De-Silva/
+Link to GitHub Pages for this repo:(https://mths-icd2o-1-2023.github.io/ICD2O-1-2023-Final-Project-Giordan-Zeina-Nathan-De-Silva/)
 
 [![Mr Coxall's Super Linter](https://github.com/ICD2O-1-2023-Final-Project-Giordan-Zeina-Nathan-De-Silva/workflows/Mr%20Coxall's%20Super%20Linter/badge.svg)](https://github.com/ICD2O-1-2023-Final-Project-Giordan-Zeina-Nathan-De-Silva/actions)
 
