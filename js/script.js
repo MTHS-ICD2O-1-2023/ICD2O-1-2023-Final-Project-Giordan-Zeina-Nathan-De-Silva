@@ -24,12 +24,12 @@ const data = [16, 16, 16, 16, 16, 16]
 
 // Color of each piece
 var pieColors = [
-  "#8b35bc",
-  "#b163da",
-  "#8b35bc",
-  "#b163da",
-  "#8b35bc",
-  "#b163da",
+  "#ff0000",
+  "#1a1aff",
+  "#00cc00",
+  "#ff33ff",
+  "#cc9900",
+  "#9f1aff",
 ]
 
 // Chart
@@ -44,7 +44,8 @@ let myChart = new Chart(wheel, {
     // Pie settings
     datasets: [
       {
-        backgroundColor: pieColors
+        backgroundColor: pieColors,
+        data: data,
       },
     ],
   },
@@ -89,6 +90,7 @@ let resultValue = 101
 
 // Start spinning
 spinBtn.addEventListener("click", () => {
+  spinBtn.disabled = false
   // Empty final value
   finalValue.innerHTML = `<p>Good Luck!</p>`
   // Generate random degrees to stop at
@@ -110,10 +112,10 @@ spinBtn.addEventListener("click", () => {
     resultValue -= 5
     myChart.options.rotation = 0
    }
-   else if(count> 15 && myChart.options.rotation) {
+   else if(count> 15 && myChart.options.rotation == randomDegree) {
     valueGenerator(randomDegree)
     clearInterval(rotationInterval)
-    count = 
+    count = 0
     resultValue = 101
    }
   }, 10)
