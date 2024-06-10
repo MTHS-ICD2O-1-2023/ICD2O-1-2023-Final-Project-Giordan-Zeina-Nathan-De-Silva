@@ -59,7 +59,7 @@ body {
   cursor: pointer;
   border: 0;
   background: radial-gradient(#473dff 50%, #03039e 85%);
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   font-size: 1.8em;
   letter-spacing: 0.1em;
@@ -85,7 +85,7 @@ img {
   .wrapper {
     font-size: 12px;
   }
-  
+
   img {
     right: -5%;
   }
