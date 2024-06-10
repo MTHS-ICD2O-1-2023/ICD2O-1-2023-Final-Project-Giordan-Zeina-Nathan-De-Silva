@@ -72,10 +72,10 @@ let myChart = new Chart(wheel, {
 
 // display value based on the randomAngle
 const valueGenerator = (angleValue) => {
-  for(let i of rotationValues){
+  for(let number of rotationValues){
     // if the angleValue is between min and max then display it
-    if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
-      finalValue.innerHTML = `<p>Value: ${i.value}</p>`
+    if (angleValue >= number.minDegree && angleValue <= number.maxDegree) {
+      finalValue.innerHTML = `<p>Value: ${number.value}</p>`
       spinBtn.disabled = false
       break
     }
