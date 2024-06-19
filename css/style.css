@@ -12,14 +12,14 @@
 
 body {
   height: 100vh;
-  background:  #000000;
+  background:  #000;
 }
 
 .wrapper {
   width: 90%;
   max-width: 34.37em;
   max-height: 90vh;
-  background-color: #000000;
+  background-color: #000;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -58,8 +58,8 @@ body {
   border-radius: 50%;
   cursor: pointer;
   border: 0;
-  background: #000000;
-  color: #ffffff;
+  background: #000;
+  color: #fff;
   text-transform: uppercase;
   font-size: 1.8em;
   letter-spacing: 0.1em;
@@ -77,7 +77,7 @@ img {
   font-size: 1.5em;
   text-align: center;
   margin-top: 1.5em;
-  color: #ffffff;
+  color: #fff;
   font-weight: 500;
 }
 
